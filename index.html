@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space tourism multi-page website</title>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+
+<body id="background">
+
+    <template id="menu-template">
+        <nav class="menu">
+            <ul>
+                <li><a href="#" data-page="home"><span>00</span> HOME</a></li>
+                <li><a href="#" data-page="destination"><span>01</span> DESTINATION</a></li>
+                <li><a href="#" data-page="crew"><span>02</span> CREW</a></li>
+                <li><a href="#" data-page="tech"><span>03</span> TECHNOLOGY</a></li>
+            </ul>
+        </nav>
+        <nav class="hamburger">
+            <div class="hamburger-button"></div>
+            <ul class="drop-menu">
+                <li><a href="#" data-page="home"><span>00</span> HOME</a></li>
+                <li><a href="#" data-page="destination"><span>01</span> DESTINATION</a></li>
+                <li><a href="#" data-page="crew"><span>02</span> CREW</a></li>
+                <li><a href="#" data-page="tech"><span>03</span> TECHNOLOGY</a></li>
+            </ul>
+        </nav>
+    </template>
+
+    <header id="header">
+        <a href="#" data-page="home"><img src="src/assets/shared/logo.svg" alt="Logo" class="logo"></a>
+        <img src="src/assets/shared/line.png" alt="Line" class="line">
+
+        <div id="header-menu-container"></div>
+    </header>
+
+    <main id="content"></main>
+
+    <footer id="footer" class="menu-footer">
+        <a href="#" data-page="home"><img src="src/assets/shared/logo.svg" alt="Logo" class="logo"></a>
+        <img src="src/assets/shared/line.png" alt="Line" class="line">
+
+        <div id="footer-menu-container"></div>
+    </footer>
+
+    <script type="module" src="src/scripts/content.js"></script>
+    <script>
+        const menuTemplate = document.getElementById('menu-template').content;
+        document.getElementById('header-menu-container').appendChild(menuTemplate.cloneNode(true));
+        document.getElementById('footer-menu-container').appendChild(menuTemplate.cloneNode(true));
+    </script>
+</body>
+
+</html>
