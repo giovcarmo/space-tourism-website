@@ -127,6 +127,12 @@ main .button:hover {
     color: #C2C3C5;
 }
 
+.home {
+    background: url(../assets/home/background-home-desktop.jpg) no-repeat;
+    background-size: cover;
+    transition: all 0.2s ease-in-out;
+}
+
 @media (max-width: 1400px) {
     header .line {
         width: 150px;
@@ -195,6 +201,16 @@ main .button:hover {
 }
 
 @media (max-width: 769px) {
+    .home {
+        background: url(../assets/home/background-home-tablet.jpg) no-repeat;
+        background-size: cover;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #description {
+        text-align: center;
+    }
+
     header .menu {
         display: none;
     }
@@ -277,6 +293,7 @@ main .button:hover {
     main {
         margin-top: 34px;
     }
+
 }
 
 @media (max-width: 550px) {
@@ -304,12 +321,6 @@ main .button:hover {
         margin: 119px 0px 0px 0px;
         font-size: 18px;
     }
-}
-
-.home {
-    background: url(../assets/home/background-home-desktop.jpg) no-repeat;
-    background-size: cover;
-    transition: all 0.2s ease-in-out;
 }
 
 /* DESTINATION CONTENT */
@@ -453,7 +464,6 @@ p {
         width: 300px;
         height: 300px;
         margin: 90px 0px 74px 60px;
-        transition: all 0.2s ease-in-out;
     }
 
     .destination-select .destination-content nav {
@@ -476,7 +486,23 @@ p {
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 556px) {
+    .content-01 .destination-title {
+        width: 380px;
+    }
+
+    .destination-select .destination-image img {
+        width: 300px;
+        height: 300px;
+        margin: 90px 0px 74px 0px;
+    }
+
+    .destination-select .destination-content {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 379px) {
 
     .content-01 {
         max-width: 355px;
@@ -510,7 +536,6 @@ p {
         width: 150px;
         height: 150px;
         margin: 90px 0px 74px 20px;
-        transition: all 0.2s ease-in-out;
     }
 
     .destination-select .destination-content {
@@ -648,12 +673,14 @@ p {
 
     .crew-content {
         width: 100%;
-
     }
 
+    .crew-data .left-crew .crew-link {
+        margin: 86px 45px 48px 0px;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 825px) {
     .content-02 {
         margin: 0px 40px;
     }
@@ -676,6 +703,11 @@ p {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-right: 0px;
+    }
+
+    .crew-content .crew-data .left-crew nav a:last-child {
+        margin-right: 0px;
     }
 
     .crew-content .crew-data .left-crew .role {
@@ -946,19 +978,51 @@ p {
 }
 
 @media (max-width: 820px) {
+    .content-03 {
+        background: url(../assets/technology/background-technology-tablet.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .tech-content {
+        margin-bottom: 40px;
+    }
+
     .tech-content .tech-data .tech-images {
         margin-left: 0px;
+    }
+
+    .tech-content .tech-data .tech-images img {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 769px) {
+    .tech-content .tech-title {
+        margin: 100px 0px 88px 80px;
     }
 }
 
 @media (max-width: 627px) {
     .tech-content .tech-title {
+        margin: 100px 0px 88px 0px;
+    }
+
+    .tech-content .tech-title {
         text-align: center;
     }
 
-    .tech-content .tech-title .tech-data .left-tech nav,
-    .tech-content .tech-title .tech-data .left-tech .tech-content {
+    .tech-content .tech-data .left-tech {
+        margin-left: 30px;
+    }
+
+    .tech-content .tech-data .left-tech nav {
         margin: 0px;
+    }
+
+    .tech-content .tech-data .left-tech .tech-content {
+        width: 500px;
+        margin: 0px;
+        align-self: center;
     }
 }
 
@@ -983,6 +1047,14 @@ p {
     .tech-content .tech-title h3 {
         font-size: 16px;
         text-align: center;
+    }
+
+    .tech-content .tech-data .left-tech .tech-content {
+        margin: 0px 0px 0px 60px;
+    }
+
+    .tech-content .tech-data .left-tech nav {
+        margin-left: 60px;
     }
 
     .tech-content .tech-data .left-tech nav .tech-link {
